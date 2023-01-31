@@ -23,20 +23,19 @@ html {
 }
 body {
   font-family: "Inter", sans-serif;
+  background-color: var(--off-white);
+  height: 100rem;
 }
 
 /* ##############------############## HEADER #######----########## */
-img {
-  display: none;
-}
+
 .header {
-  max-width: 110rem;
-  background-color: red;
+  max-width: 120rem;
   margin: 0 auto;
+  padding: 5rem 10rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* height: 6rem; */
 }
 .logo-icon {
   display: block;
@@ -45,15 +44,150 @@ img {
   display: flex;
   list-style: none;
   gap: 3rem;
-  /* padding: 2rem; */
 }
 
 .main-nav-bar li a:link,
 .main-nav-bar li a:visited {
   text-decoration: none;
-  color: aliceblue;
+  color: var(--dark-grayish-blue);
+  font-size: 1.5rem;
+  display: block;
+}
+
+.container {
+  display: grid;
+  row-gap: 6rem;
+  grid-template-columns: 1fr auto;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 10rem;
+  column-gap: 3rem;
+}
+
+/* ####--------- HERO */
+.hero-img {
+  width: 100%;
+}
+
+.hero-text {
+  margin-top: 2.6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+h1 {
+  font-size: 4.8rem;
+  font-weight: 800;
+  color: var(--very-dark-blue);
+  max-width: 30rem;
+  line-height: 1;
+}
+
+.paragraphs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.hero-paragraph {
+  font-size: 1.4rem;
+  color: var(--dark-grayish-blue);
+  line-height: 1.6;
+}
+
+.hero-a:link,
+.hero-a:visited {
+  text-decoration: none;
+  color: var(--off-white);
+  padding: 1.5rem 3rem;
+  background-color: var(--soft-red);
+  display: inline-block;
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* ####--------- ASIDE */
+.aside {
+  background-color: var(--very-dark-blue);
+  color: #fff;
+  max-width: 31rem;
+  padding: 2.4rem 2.5rem;
+}
+
+.aside-title {
+  font-size: 3.6rem;
+  text-transform: capitalize;
+  color: var(--soft-orange);
+  margin-bottom: 2.4rem;
+}
+
+.aside-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.aside-card-title {
+  color: var(--off-white);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.aside p {
+  color: var(--grayish-blue);
+  font-size: 1.3rem;
+  line-height: 1.8;
+}
+
+.line {
+  width: 100%;
+  background-color: var(--dark-grayish-blue);
+  height: 1px;
+}
+
+/* ####--------- ASIDE */
+.cards {
+  grid-column: 1/-1;
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+}
+
+.card {
+  display: flex;
+  max-width: 28rem;
+}
+
+.card-img {
+  width: 30%;
+  object-fit: cover;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 20rem;
+}
+
+.card-text span {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--grayish-blue);
+}
+
+.card-text h3 {
+  color: var(--very-dark-blue);
   font-size: 1.6rem;
-  background-color: violet;
-  /* padding: 2rem; */
-  /* display: block; */
+  font-weight: 800;
+}
+
+.card-text p {
+  color: var(--dark-grayish-blue);
+  font-size: 1.4rem;
+  line-height: 1.6;
 }
