@@ -22,6 +22,7 @@
   <body>
     <header>
       <div class="header">
+        <div class="menu-overlay"></div>
         <img
           class="logo-icon"
           src="assets/images/logo.svg"
@@ -34,16 +35,32 @@
           <li><a href="#">Trending</a></li>
           <li><a href="#">Categories</a></li>
         </nav>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
       </div>
     </header>
     <main>
       <div class="container">
         <div class="hero">
-          <img
+          <!-- <img
             class="hero-img"
             src="assets/images/image-web-3-desktop.jpg"
             alt="header image"
-          />
+          /> -->
+          <picture>
+            <source
+              media="(max-width: 720px)"
+              srcset="./assets/images/image-web-3-mobile.jpg"
+            />
+            <img
+              class="hero-img"
+              src="./assets/images/image-web-3-desktop.jpg"
+              alt="desktop hero image"
+            />
+          </picture>
           <div class="hero-text">
             <h1>The Bright Future of Web 3.0?</h1>
             <div class="paragraphs">
@@ -130,5 +147,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div> -->
+    <script src="script.js"></script>
   </body>
 </html>

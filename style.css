@@ -58,6 +58,31 @@ body {
   color: var(--soft-red);
 }
 
+.burger {
+  display: none;
+}
+.burger div {
+  width: 50px;
+  height: 3px;
+  background-color: var(--very-dark-blue);
+  margin: 5px;
+  transition: all 0.23s ease;
+}
+
+/* BLACK LANDSCAPE */
+.menu-overlay {
+  position: fixed;
+  z-index: 600;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
 .container {
   display: grid;
   row-gap: 6rem;
@@ -178,7 +203,7 @@ h1 {
 }
 
 .card-img {
-  width: 29%;
+  width: 30%;
   object-fit: cover;
 }
 
@@ -211,4 +236,84 @@ h1 {
   color: var(--dark-grayish-blue);
   font-size: 1.3rem;
   line-height: 1.6;
+}
+
+@media (max-width: 720px) {
+  .header {
+    padding: 0 2rem;
+    padding-top: 5rem;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  body {
+    position: relative;
+    overflow-x: hidden;
+  }
+  html {
+    overflow-x: hidden;
+  }
+
+  .main-nav-bar {
+    padding-top: 20rem;
+    padding-left: 4rem;
+    width: 28rem;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: aquamarine;
+    height: 100vh;
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  .nav-active {
+    transform: translateX(0%);
+  }
+  .main-nav-bar li a:link,
+  .main-nav-bar li a:visited {
+    color: var(--very-dark-blue);
+    font-size: 2.4rem;
+  }
+
+  /* ANIMATION BURGER MENU */
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  /* BLACK LANDSCAPE */
+  .menu-overlay.active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /* .no-scroll {
+    overflow-y: hidden;
+  } */
+
+  h1 {
+    max-width: 34rem;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    padding: 0 2rem;
+  }
+  .hero-text {
+    grid-template-columns: 1fr;
+  }
+  .cards {
+    flex-direction: column;
+    gap: 3rem;
+  }
 }
